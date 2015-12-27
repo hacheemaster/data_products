@@ -13,6 +13,9 @@ shinyUI(fluidPage(
     # Application title
     titlePanel("Automating model building"),
     
+    h4("Documentation:"),
+    textOutput("text1"),
+    
     # Sidebar with a slider input for the number of bins
     sidebarLayout(
         sidebarPanel(

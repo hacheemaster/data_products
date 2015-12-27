@@ -10,6 +10,16 @@ for (var in factor_vars){
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
     
+    #create documentation
+    output$text1 <- renderText({
+        paste("This app is designed to automate the model-building process.
+            Please select the target on the left and choose whether you
+              would like to observe the diagnostic plots from the resulting 
+              linear regression performed on the selected target. A summary
+              of the inputs is also provided below for a quick glance at 
+              the variables in the mtcars dataset.")
+    })
+    
     #create text summary
     output$summary <- renderPrint({
         summary(mtcars)
